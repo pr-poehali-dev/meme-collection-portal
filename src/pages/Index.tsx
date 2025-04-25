@@ -1,12 +1,27 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Navbar from "@/components/Navbar";
+import MemeGrid from "@/components/MemeGrid";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4 color-black text-black">Добро пожаловать!</h1>
-        <p className="text-xl text-gray-600">тут будет отображаться ваш проект</p>
-      </div>
+    <div className="min-h-screen flex flex-col">
+      <Navbar />
+      
+      <main className="flex-1 container mx-auto py-8 px-4 sm:px-6">
+        <div className="mb-8">
+          <h1 className="text-3xl font-bold mb-2">МемоМания</h1>
+          <p className="text-muted-foreground">
+            Лучшая коллекция мемов в интернете. Смешно, остроумно, актуально!
+          </p>
+        </div>
+        
+        <MemeGrid />
+      </main>
+      
+      <footer className="bg-card py-6 border-t">
+        <div className="container mx-auto px-4 sm:px-6 text-center text-sm text-muted-foreground">
+          <p>© 2025 МемоМания — Все права зарезервированы</p>
+        </div>
+      </footer>
     </div>
   );
 };
